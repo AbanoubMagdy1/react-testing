@@ -2,7 +2,6 @@ import React from 'react'
 import {screen, render} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Rating from './Rating'
-import "@testing-library/jest-dom"
 
 test('Rating component', async () => {
     const user = userEvent.setup()
