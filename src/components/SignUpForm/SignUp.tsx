@@ -3,14 +3,9 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 export const errorMessages = {
-    firstName: {
+    name: {
         min: 'Must be 2 characters or more',
         max: 'Must be 15 characters or less',
-        required: 'Required',
-    },
-    lastName: {
-        min: 'Must be 2 characters or more',
-        max: 'Must be 20 characters or less',
         required: 'Required',
     }, 
     email: {
@@ -21,13 +16,13 @@ export const errorMessages = {
 
 const signUpSchema = Yup.object({
     firstName: Yup.string()
-      .min(2, errorMessages.firstName.min)
-      .max(15, errorMessages.firstName.max)
-      .required(errorMessages.firstName.required),
+      .min(2, errorMessages.name.min)
+      .max(15, errorMessages.name.max)
+      .required(errorMessages.name.required),
     lastName: Yup.string()
-      .min(2, errorMessages.lastName.min)
-      .max(15, errorMessages.lastName.max)
-      .required( errorMessages.lastName.required),
+      .min(2, errorMessages.name.min)
+      .max(15, errorMessages.name.max)
+      .required( errorMessages.name.required),
     email: Yup.string().email(errorMessages.email.email).required(errorMessages.email.required),
 })
 
